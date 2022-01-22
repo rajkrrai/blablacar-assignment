@@ -1,38 +1,145 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*helper class*/
+.text-bold {
+  font-weight: bold;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  width: 75%;
+  height: 2px;
+  margin: 1rem auto;
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 100px;
+  margin: 3rem auto;
+  height: 100px;
+  flex-direction: column;
+}
+.loader p {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.loaderImg {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.nores {
+  padding: 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nores img {
+  height: 50%;
+  width: 50%;
+  margin-top: 3rem;
+}
+/*ends*/
+.container {
+  width: 60%;
+  margin: 3rem auto;
+}
+.travelDay {
+  font-size: 3rem;
+}
+.secondary-text {
+  font-size: 1rem;
+  color: rgb(122, 122, 120);
+}
+a.address-link {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.address-link {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  align-content: center;
   align-items: center;
+}
+.card {
+  width: 70%;
+}
+.card-body {
+  margin: 0;
+  padding: 0;
+}
+.address-block:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.cityAddress {
+  display: flex;
+  align-items: center;
+}
+
+.mapicon {
+  margin-right: 1rem;
+}
+
+.address-main {
+  padding: 0;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.city-main {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #6b6b6b;
+}
+
+.fa-chevron-right {
+  font-size: 1rem;
+}
+
+/*Price Details*/
+.price-car-Details {
+  padding: 0 2rem;
+}
+.priceDetail {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carDetail {
+  display: flex;
+  justify-content: space-around;
+}
+.carDetail {
+  padding: 0 12px 10px 12px;
+}
+
+.carImg {
+  height: 4rem;
+  width: 4rem;
+  background-color: #dad8fcee;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.departMsg {
+  font-size: 0.8rem;
 }
