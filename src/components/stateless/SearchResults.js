@@ -27,7 +27,7 @@ export const SearchResults = ({ trips }) => {
 
         return (
           <ErrorBoundary key={idx}>
-            <div className="card mb-4">
+            <div className="card mb-4" data-listid="search-results">
               <div className="card-body">
                 {/* daparture block */}
                 <div className="address-block">

@@ -38,6 +38,8 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.2",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "enzyme": "^3.11.0",
     "jest-dom": "^4.0.0",
     "react-test-render": "^1.1.2"
   }
