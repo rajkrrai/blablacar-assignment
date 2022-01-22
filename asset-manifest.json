@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/blablacar-assignment/static/css/main.9c8ffcd5.css",
+    "main.js": "/blablacar-assignment/static/js/main.fe70e8fa.js",
+    "static/media/noResultFound.svg": "/blablacar-assignment/static/media/noResultFound.dfa8a2b2129b56c5e3fc7ef517fe1897.svg",
+    "static/media/Steerwheel.gif": "/blablacar-assignment/static/media/Steerwheel.7813e1dc297a9bec0a0c.gif",
+    "index.html": "/blablacar-assignment/index.html",
+    "main.9c8ffcd5.css.map": "/blablacar-assignment/static/css/main.9c8ffcd5.css.map",
+    "main.fe70e8fa.js.map": "/blablacar-assignment/static/js/main.fe70e8fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c8ffcd5.css",
+    "static/js/main.fe70e8fa.js"
+  ]
+}
