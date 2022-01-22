@@ -25,7 +25,7 @@ function App() {
       try {
         setLoading(true);
         let res = await FetchRideDetails();
-        // console.log("data:", res.data);
+        console.log("data:", res.data);
         // setSearchObj(res.data);
         let newSerchObj = res.data;
         // // console.log("newSerchObj:", newSerchObj);
