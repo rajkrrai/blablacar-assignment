@@ -1,9 +1,8 @@
 import moment from "moment";
 import React, { Fragment } from "react";
 import ErrorBoundary from "../statefull/ErrorBoundaries";
-export const SearchResults = ({ trips }) => {
-  // console.log(trips.length);
-
+// if trips are present then show them in a card
+const SearchResults = ({ trips }) => {
   return (
     <Fragment>
       {trips.map((item, idx) => {
@@ -14,15 +13,15 @@ export const SearchResults = ({ trips }) => {
         let today = new Date();
         today = moment(today).format("HH:mm");
         let startTime = moment(item.waypoints[0].date_time).format("HH:mm");
-
         let elapsedTime = moment(item.waypoints[0].date_time).fromNow("hh:s");
         let departMsg;
+
         if (today > startTime) {
-          departMsg = `Departed ${elapsedTime} ago`; //if time elapsed just how many mins ago
+          departMsg = `Departed ${elapsedTime} ago`; //if ride departed just show how many mins ago
         } else {
-          departMsg = `Departs at ${moment(item.waypoints[0].date_time).format(
+          departMsg = `Departs in ${moment(item.waypoints[0].date_time).format(
             "HH:mm"
-          )} ~${elapsedTime} from now`; //for future ride: show time and time remaining
+          )} ~${elapsedTime}`; //for upcoming rides: show time and the time remaining
         }
 
         return (
@@ -44,12 +43,9 @@ export const SearchResults = ({ trips }) => {
                           {item.waypoints[0].place.address} &mdash;{" "}
                           <span className="departMsg">{departMsg}</span>
                         </p>
-                        {/* address */}
                         <p className="city-main">
-                          {" "}
                           {item.waypoints[0].place.city}
-                        </p>{" "}
-                        {/* city */}
+                        </p>
                       </div>
                     </div>
 
@@ -79,12 +75,10 @@ export const SearchResults = ({ trips }) => {
                             )}
                           </span>
                         </p>
-                        {/* address */}
+
                         <p className="city-main">
-                          {" "}
                           {item.waypoints[1].place.city}
-                        </p>{" "}
-                        {/* city */}
+                        </p>
                       </div>
                     </div>
 
@@ -98,7 +92,6 @@ export const SearchResults = ({ trips }) => {
                 {/* Price and car model section */}
                 <div className="price-car-Details">
                   <div className="carDetail">
-                    {" "}
                     <p className="text-muted">Total price for 1 passenger</p>
                     <p className="text-bold">€ {item.price.amount}</p>
                   </div>

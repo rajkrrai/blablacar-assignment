@@ -143,3 +143,10 @@ a.address-link {
 .departMsg {
   font-size: 0.8rem;
 }
+
+.align-button {
+  width: 65%;
+  margin: 0 auto;
+  /* width: 65%; */
+  /* float: right; */
+}
