@@ -1,5 +1,12 @@
 import axios from "axios";
 import moment from "moment";
+/**
+ * Functional component: This component is soley used for making the api calls. It is dynamic in the sense that it takes
+ *    a) the current date
+ *    b) if total rides are more than 10 then next_cursor can be passed to this function to get more records. (used for pagination)
+ *    c) APIKEY is stored in the .env file and then used in the function below
+ */
+
 let today = new Date();
 today = moment(today).format("D, MMMM");
 let apiDate = moment.parseZone(today).local(true).format().split("+")[0]; //ex: 2022-01-21T12:00:00

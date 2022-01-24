@@ -29,7 +29,7 @@ function App() {
         populateStateFromData(newSerchObj);
       } catch (err) {
         setLoading(false);
-        console.log(err);
+
         throw new Error("Something went wrong...!");
       }
     };
@@ -40,7 +40,6 @@ function App() {
     const { count, full_trip_count } = newSerchObj.search_info;
     const availableRides = count - full_trip_count;
     const { trips, next_cursor, currpage } = newSerchObj;
-    console.log(currpage);
 
     //if trip is available set trip array,tripossible=true and msg to user else tripossible=false and revelant msg
     if (trips.length > 0) {
@@ -80,7 +79,6 @@ function App() {
       newSerchObj.currpage = currpage;
       populateStateFromData(newSerchObj);
       setCurrPageIndex(currpage);
-      console.log("current pg index on next", currPageIndex);
     } catch (error) {
       setLoading(false);
       throw new Error("Something went wrong...!");
@@ -96,16 +94,15 @@ function App() {
       newSerchObj.currpage = currpage;
       populateStateFromData(newSerchObj);
       setCurrPageIndex(currpage);
-      console.log("current pg index prev", currPageIndex);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+
       throw new Error("Something went wrong...!");
     }
   };
 
   return (
-    <div className="container">
+    <div className="container" data-test="app-container">
       <header>
         <h4 className="travelDay text-primary">
           <i className="far fa-calendar-check"></i> Today &mdash; {today}
@@ -128,6 +125,7 @@ function App() {
               className="btn btn-primary mr-3"
               onClick={goToPrevPage}
               disabled={disablePrevbtn}
+              data-test="btn-prev"
             >
               Previous
             </button>
@@ -136,6 +134,7 @@ function App() {
               className="btn btn-success"
               onClick={goToNextPage}
               disabled={disableNextBtn}
+              data-test="btn-next"
             >
               Next
             </button>

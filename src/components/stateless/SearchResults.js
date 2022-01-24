@@ -1,8 +1,21 @@
 import moment from "moment";
 import React, { Fragment } from "react";
 import ErrorBoundary from "../statefull/ErrorBoundaries";
+
+/**
+ * Functional component: This component takes the trip array from App component as props and renders a card component with necessary detail. If no trips are available it will show a message
+ *
+ */
+
 // if trips are present then show them in a card
 const SearchResults = ({ trips }) => {
+  if (trips.length === 0) {
+    return (
+      <div>
+        <h3 className="text-secondary">No trips available for today!</h3>
+      </div>
+    );
+  }
   return (
     <Fragment>
       {trips.map((item, idx) => {

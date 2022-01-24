@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import NoResult from "../stateless/NoResult";
+
+/**
+ * Class component: This ErrorBoundary component is used to catch the error when wrapped around the element and helps prevent the entire app from crashing or showing blank screen to the users
+ * @returns {JSX.Element} - Rendered component (an image with no result found and a message)
+ */
+
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);

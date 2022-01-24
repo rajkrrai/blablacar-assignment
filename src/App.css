@@ -53,6 +53,7 @@ hr {
   margin-top: 3rem;
 }
 /*ends*/
+
 .container {
   width: 60%;
   margin: 3rem auto;
@@ -147,6 +148,4 @@ a.address-link {
 .align-button {
   width: 65%;
   margin: 0 auto;
-  /* width: 65%; */
-  /* float: right; */
 }

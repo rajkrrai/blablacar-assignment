@@ -1,6 +1,10 @@
 import spinnerImg from "../../assets/Steerwheel.gif";
+/**
+ * Functional component: This component display a gif loader image with a message when loading set to true
+ *
+ */
+
 const Spinner = (loading) => {
-  //   console.log(loading);
   if (loading) {
     return (
       <div className="loader">
