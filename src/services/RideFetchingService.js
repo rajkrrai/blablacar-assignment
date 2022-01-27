@@ -15,11 +15,11 @@ let apiDate = moment.parseZone(today).local(true).format().split("+")[0]; //ex: 
 let FetchRideDetails = async (fromCursor) => {
   if (!fromCursor) {
     return axios.get(
-      `https://public-api.blablacar.com/api/v3/trips?key=${process.env.REACT_APP_APIKEY}&from_coordinate=48.8566%2C2.3522&to_coordinate=45.764043%2C4.835659&from_country=FR&to_country=FR&locale=en-GB&currency=EUR&start_date_local=${apiDate}`
+      `https://public-api.blablacar.com/api/v3/trips?key=${process.env.REACT_APP_APIKEY}&from_coordinate=48.8566%2C2.3522&to_coordinate=45.764043%2C4.835659&from_country=FR&to_country=FR&locale=fr-FR&currency=EUR&start_date_local=${apiDate}`
     );
   } else {
     return axios.get(
-      `https://public-api.blablacar.com/api/v3/trips?key=${process.env.REACT_APP_APIKEY}&from_coordinate=48.8566%2C2.3522&to_coordinate=45.764043%2C4.835659&from_country=FR&to_country=FR&locale=en-GB&currency=EUR&start_date_local=${apiDate}&from_cursor=${fromCursor}`
+      `https://public-api.blablacar.com/api/v3/trips?key=${process.env.REACT_APP_APIKEY}&from_coordinate=48.8566%2C2.3522&to_coordinate=45.764043%2C4.835659&from_country=FR&to_country=FR&locale=fr-FR&currency=EUR&start_date_local=${apiDate}&from_cursor=${fromCursor}`
     );
   }
 };
